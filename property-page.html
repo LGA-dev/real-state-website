@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/mediaqueries.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato|Staatliches&display=swap" rel="stylesheet" />
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+  <title>
+    Lorem Ipsum Bienes Raíces
+  </title>
+</head>
+
+<body>
+  <!-- Grid container -->
+  <div class="grid">
+
+    <!-- Nav -->
+    <nav id="navigation">
+      <!-- Logo -->
+      <div class="logo" id="logo">Lorem <span>Ipsum</span></div>
+      <!-- Navigation links -->
+      <div class="navigation-links" id="navigation-links">
+        <a href="/index.html">Inicio</a>
+        <a href="/featured.html">Propiedades</a>
+        <a href="/contact.html">Contacto</a>
+        <a href="/about.html">Sobre nosotros</a>
+      </div>
+      <!-- Hamburger menu -->
+      <div class="hamburger-menu" id="hamburger-menu">
+        <a href=""></a>
+        <i class="fas fa-bars fa-2x"></i>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="small" id="contact-header">
+      <div class="container">
+        <div class="header-main">
+          <div class="header-text text-center">
+            <h1>Propiedad</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main section -->
+    <main id="property-main">
+      <div class="container">
+        <div class="property-wrapper">
+          <!-- Property images -->
+          <div class="property-images">
+            <img src="/img/recent_house_1.png" alt="" srcset="">
+          </div>
+
+          <!-- Property title -->
+          <div class="property-title">
+            <h1>25 de Mayo, 1129</h1>
+            <p>Lanús Oeste, B1824</p>
+            <p id="price">$1,500,000</p>
+          </div>
+
+          <!-- Property info -->
+          <div class="property-info">
+            <h1>Detalles de la propiedad</h1>
+            <div class="items-wrapper">
+              <p><i class="fa fa-th-large"></i> 20 Metros cuadrados</p>
+              <p><i class="fa fa-car"></i> 1 Garages</p>
+              <p><i class="fa fa-bed"></i> 3 Dormitorios</p>
+              <p><i class="fa fa-bath"></i> 1 Baño</p>
+              <p><i class="fa fa-user"></i> Frodo Baggins</p>
+              <p><i class="fa fa-clock"></i> Hace 1 día</p>
+            </div>
+          </div>
+
+          <!-- Property description -->
+          <div class="property-description">
+            <h1>Descripcion</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit esse non porro et, amet repellendus unde provident voluptatibus quibusdam, nam blanditiis? Nobis unde, ipsam doloremque sed id adipisci excepturi? Praesentium similique aliquam ex tempora facilis nobis, perspiciatis, consequatur possimus cum autem aspernatur nam neque velit blanditiis ad ullam magnam earum fuga maiores? Fugit iste sapiente error mollitia maiores incidunt asperiores dolorum perspiciatis voluptas eaque, hic, modi voluptatem soluta quas quam beatae quae, explicabo expedita.</p>
+          </div>
+
+          <!-- Property floorplans -->
+          <div class="property-floorplans">
+            <h1>Planos</h1>
+            <img src="/img/plan-sketch.png" alt="">
+          </div>
+
+          <!-- Property video -->
+          <div class="property-video">
+            <h1>Video</h1>
+            <iframe width="100%" height="390" src="//www.youtube.com/embed/v13nSVp6m5I" frameborder="0" allowfullscreen></iframe>
+          </div>
+
+          <!-- Property location -->
+          <div class="property-location">
+            <h1>Ubicacion</h1>
+            <div id='map' style='width: 100%; height: 300px;'></div>
+            <script>
+              var center = [-58.388875,-34.612427];
+              mapboxgl.accessToken = 'pk.eyJ1IjoiZmxlZXRpbmctbGFuZHNjYXBlIiwiYSI6ImNrNHhpbWJtZDAxYzgzam4zM3dqa3BzMGoifQ.hxp6vpatxFaflwRMYK20sA';
+              var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11',
+                center: center,
+                zoom: 16 // starting zoom
+              });
+            </script>
+            
+          </div>
+
+        </div>
+        <div class="property-sidebar">
+
+          <div class="agent-card">
+            <div class="agent-photo">
+              <img src="/img/agent-1.jpg" alt="">
+            </div>
+            <div class="agent-info">
+              <h2>Martin Olivera</h2>
+              <p> Agente de bienes raíces </p>
+            </div>
+            <div class="agent-contact">
+              <a href="tel:+011-4444-4444">
+                <i class="fas fa-phone-alt fa-lg"></i>
+                (567) 666 121 2211
+              </a>
+              <a href="mailto:df_loremipsum@gmail.com">
+                <i class="fas fa-envelope fa-lg"></i>
+                df_loremipsum@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+
+              <div class="section-title text-center">
+                <h2>Tiene alguna pregunta?</h2>
+              </div>
+              <form action="" class="contact-form">
+                <input type="text" placeholder="Ingrese su nombre" id="name" />
+                <input type="text" placeholder="Ingrese su email" id="email" />
+                <input type="text" placeholder="Ingrese su mensaje" id="msg" />
+                <button class="contact-button">
+                  Enviar
+                </button>
+              </form>
+
+          </div>
+
+          <div class="related-properties-card">
+            <h1>Propiedades relacionadas</h1>
+
+            <!-- Related listing box -->
+            <div class="featured-property-box">
+              <div class="featured-property-image" id="sixth">
+                <img src="" alt="" />
+                <div class="property-items" id="status-box">
+                  <p id="sale">Venta</p>
+                </div>
+              </div>
+              <div class="featured-property-title text-center">
+                <h3>Gral. las Heras, 1101</h3>
+                <p><i class="fas fa-map-marker-alt"></i>Vicente López, B1638</p>
+              </div>
+              <div class="featured-property-price text-center">
+                <p>$10,000,000</p>
+              </div>
+            </div>
+
+            <!-- Related listing box -->
+            <div class="featured-property-box">
+              <div class="featured-property-image" id="second">
+                <img src="" alt="" />
+                <div class="property-items" id="status-box">
+                  <p id="rent">Alquiler</p>
+                </div>
+              </div>
+              <div class="featured-property-title text-center">
+                <h3>Av. Cabildo, 2812</h3>
+                <p><i class="fas fa-map-marker-alt"></i>Belgrano, C1428</p>
+              </div>
+              <div class="featured-property-price text-center">
+                <p>$50,000/m</p>
+              </div>
+            </div>
+
+            <!-- Related listing box -->
+            <div class="featured-property-box">
+              <div class="featured-property-image" id="first">
+                <img src="" alt="" />
+                <div class="property-items" id="status-box">
+                  <p id="sale">Venta</p>
+                </div>
+              </div>
+              <div class="featured-property-title text-center">
+                <h3>25 de Mayo, 1129</h3>
+                <p><i class="fas fa-map-marker-alt"></i>Lanús Oeste, B1824</p>
+              </div>
+              <div class="featured-property-price text-center">
+                <p>$1,500,000</p>
+              </div>
+            </div>
+
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer section-->
+    <div class="footer">
+      <div class="container">
+        <!-- Contact section -->
+        <div class="footer-contact">
+          <div class="contact-info">
+            <h2>Contacto</h2>
+            <a
+              href="https://www.google.com/maps/place/Estacion+Tigre/@-34.4240377,-58.5818271,17z/data=!4m13!1m7!3m6!1s0x95bca5a2d0ddb9b1:0x2c1a974c67cba1e4!2sTigre,+Buenos+Aires+Province!3b1!8m2!3d-34.425087!4d-58.5796585!3m4!1s0x95bca5bc93522561:0x5cceeff0ea6236fb!8m2!3d-34.423452!4d-58.5818435">
+              <i class="fas fa-map-marker-alt fa-lg"></i>
+              Luis García 650, Tigre
+            </a>
+            <a href="tel:+011-4444-4444">
+              <i class="fas fa-phone-alt fa-lg"></i>
+              4444 - 4444
+            </a>
+            <a href="mailto:loremipsumpropiedades@gmail.com">
+              <i class="fas fa-envelope fa-lg"></i>
+              loremipsumpropiedades@gmail.com
+            </a>
+            <a href="">
+              <i class="far fa-clock fa-lg"></i>
+              Lunes - Sabados, 08 AM a 06 PM
+            </a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-2x"></i></a>
+            <a href="https://twitter.com/"><i class="fab fa-twitter-square fa-2x"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://www.pinterest.com/"><i class="fab fa-pinterest fa-2x"></i></a>
+          </div>
+        </div>
+        <!-- Newsletter section -->
+        <div class="footer-newsletter">
+          <h2>Newsletter</h2>
+          <p>Suscribase para obtener las últimas noticias y nuevas ofertas</p>
+          <form action="" class="filter-form">
+            <input type="text" placeholder="Ingrese su correo electrónico" />
+            <button class="filter-button">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+<script src="https://kit.fontawesome.com/7fd34162e1.js"></script>
+<script src="/js/main.js"></script>
+</html>
